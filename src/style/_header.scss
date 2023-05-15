@@ -1,0 +1,37 @@
+.header {
+&__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 360px;
+    padding-top: 40px;
+    margin: 0 auto;
+
+    @include lg {
+      
+    }
+
+    @include xl {
+      max-width: 1200px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+}
+}
+.navigation {
+  &__item {
+    width: 48px;
+    height: 48px;
+  }
+
+  &__button {
+    display: block;
+    width: 24px;
+    height: 16px;
+    background: url("../img/menu.svg") center/contain;
+
+    &_active {
+        // background-image: url("../img/close.svg");
+    }
+  }
+}

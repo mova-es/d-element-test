@@ -1,0 +1,90 @@
+.client {
+  padding-top: 96px;
+  padding-bottom: 111px;
+  background-color: $blue-04;
+
+  &__container {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  &__description {
+    margin-bottom: 123px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.26;
+    letter-spacing: 0.05em;
+    color: $white;
+    margin-bottom: 50px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.05em;
+    color: $white;
+    opacity: 0.6;
+  }
+
+  &__logos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include sm {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include lg {
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__logos-item {
+    width: 235px;
+    height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $white;
+    }
+
+    @include sm {
+      &:nth-child(n + 7) {
+        border: none;
+      }
+    }
+
+    @include lg {
+      &:nth-child(n + 5) {
+        border-bottom: none;
+      }
+
+      &:nth-child(3),
+      &:nth-child(7) {
+        border-left: 1px solid $white;
+      }
+    }
+
+    &:nth-child(odd) {
+      @include sm {
+        border-right: 1px solid $white;
+        justify-self: end;
+      }
+    }
+  }
+
+  &__logos-item-image {
+    font-size: 20px;
+    line-height: 2.3;
+    letter-spacing: 0.02em;
+    color: $white;
+  }
+}

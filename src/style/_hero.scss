@@ -1,0 +1,108 @@
+.hero {
+  padding-top: 11px;
+  position: relative;
+  margin: 0 auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      #98c3e8 8.84%,
+      rgba(152, 195, 232, 0) 31.12%
+    );
+    opacity: 0.2;
+  }
+
+  &__container {
+    display: block;
+    margin: 0 auto;
+    min-height: 668px;
+  }
+
+  &__content {
+    margin-bottom: 30px;
+    position: relative;
+    
+    @include lg {
+        padding-left: 129px;
+        min-height: 612px;
+    }
+  }
+
+  &__description {
+
+    @include lg {
+        padding-left: 129px;
+    }
+    
+  }
+
+  &__title {
+    font-family: "Galien";
+    font-size: 30px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+    color: $blue-01;
+    margin-bottom: 32px;
+
+    @include md {
+        font-size: 54px;
+        width: 510px;
+      }
+
+      @include lg {
+        font-size: 64px;
+        width: 510px;
+      }
+  }
+
+  
+
+  &__text {
+    font-family: "Gilroy";
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.05em;
+    color: $blue-01;
+    opacity: 0.6;
+    margin-bottom: 71px;
+
+    @include md {
+        width: 350px;
+    }
+    @include lg {
+        width: 42%;
+    }
+  }
+
+  &__link {
+    padding: 15px 48px;
+    background: $blue-04;
+    box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+    border-radius: 10px;
+    color: $white;
+    margin-bottom: 30px;
+    font-size: 16px;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    @include md {
+        position: absolute;
+        top:0;
+        right: 23px;
+        width: 50%;
+        height: auto;
+    }
+
+    // @include lg {
+    //     width: 688px;
+    //     height: 612px;
+    // }
+  }
+}

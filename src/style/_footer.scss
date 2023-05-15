@@ -1,0 +1,158 @@
+.footer {
+  padding-top: 91px;
+  padding-bottom: 64px;
+  background-color: $blue-02;
+}
+.team {
+  margin-bottom: 96px;
+  &__container {
+    max-width: 940px;
+    margin: 0 auto;
+
+    @include md {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }
+
+  &__content {
+    max-width: 460px;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-size: 36px;
+    line-height: 1.28;
+    letter-spacing: 0.05em;
+    color: $white;
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: $white;
+    opacity: 0.6;
+  }
+
+  &__talk {
+    background: $blue-04;
+    border-radius: 10px;
+    padding: 15px 75px;
+    color: $white;
+  }
+}
+
+.links {
+    margin-bottom: 31px;
+  & h4 {
+    font-size: 20px;
+    color: $white;
+    margin-bottom: 20px;
+
+    @include md {
+        margin-bottom: 32px;
+    }
+  }
+  &__container {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  &__contacts {
+    margin-bottom: 33px;
+    @include md {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    & p {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: $white;
+    }
+
+    @include md {
+        max-width: 300px;
+        margin-right: 80px;
+    }
+
+    @include lg {
+        margin-right: 100px;
+    }
+  }
+
+  &__contacts-logo {
+    display: flex;
+    gap: 15px;
+    font-size: 28px;
+    line-height: 1.64;
+    letter-spacing: 0.02em;
+    color: $white;
+    font-weight: bold;
+    margin-bottom: 33px;
+
+    @include md {
+        margin-bottom: 9px;
+    }
+  }
+
+  &__about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 33px;
+
+    @include md {
+        gap: 16px;
+    }
+    & a {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: $white;
+    }
+
+    @include md {
+        margin-right: 50px;
+    }
+
+    @include lg {
+        margin-right: 77px;
+    }
+  }
+
+  &__follow-us {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @include md {
+        gap: 16px;
+    }
+    & a {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0.05em;
+      color: $white;
+    }
+  }
+}
+.copyright {
+  &__container {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: $white;
+    opacity: 0.4;
+  }
+}

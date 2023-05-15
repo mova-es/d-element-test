@@ -1,0 +1,30 @@
+$blue-01: #1F3F68;
+$blue-02: #316099;
+$blue-03: #356EAD;
+$blue-04: #5A98D0;
+$white: #FFFFFF;
+
+@mixin sm {
+    @media (min-width: 576px) {
+      @content;
+  }
+  }
+  
+  @mixin md {
+    @media (min-width: 768px) {
+      @content;
+  }
+  }
+  
+  @mixin lg {
+    @media (min-width: 1024px) {
+      @content;
+  }    
+  }
+  
+  @mixin xl {
+    @media (min-width: 1200px) {
+      @content;
+  }      
+  }
+
