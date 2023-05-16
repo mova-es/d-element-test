@@ -102,6 +102,10 @@
     color: $blue-04;
     height: 30px;
     align-items: center;
+
+    &:hover {
+      color: $blue-01;
+    }
   }
 }
 

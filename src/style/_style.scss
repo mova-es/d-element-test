@@ -13,6 +13,19 @@ body {
   min-width: 360px;
   min-height: 100vh;
   font-family: Gilroy;
+  font-size: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1549px;
+    background: $blue-04;
+    border-radius: 200px 0px 0px 0px;
+    z-index: -2;
+  }
 }
 
 

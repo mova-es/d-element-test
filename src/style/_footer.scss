@@ -1,7 +1,24 @@
 .footer {
   padding-top: 91px;
   padding-bottom: 64px;
-  background-color: $blue-02;
+  color: $white;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: $blue-02;
+    border-radius: 0px 200px 0px 0px;
+    z-index: -1;
+    width: 92%;
+  }
+
+  & h4 {
+    font-size: 20px;
+  }
 }
 .team {
   margin-bottom: 96px;
@@ -11,8 +28,12 @@
 
     @include md {
         display: flex;
-        justify-content: space-between;
+        gap: 50px;
         align-items: center;
+    }
+
+    @include lg {
+      gap: 180px;
     }
   }
 
@@ -24,17 +45,20 @@
   &__title {
     font-size: 36px;
     line-height: 1.28;
-    letter-spacing: 0.05em;
-    color: $white;
     margin-bottom: 32px;
+    width: 80%;
+
+    @include sm {
+      width: unset;
+    }
   }
 
   &__text {
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    color: $white;
     opacity: 0.6;
+
+    @include sm {
+      width: unset;
+    }
   }
 
   &__talk {
@@ -42,6 +66,10 @@
     border-radius: 10px;
     padding: 15px 75px;
     color: $white;
+
+    &:hover {
+      outline: 1px solid $white;
+    }
   }
 }
 
@@ -49,7 +77,6 @@
     margin-bottom: 31px;
   & h4 {
     font-size: 20px;
-    color: $white;
     margin-bottom: 20px;
 
     @include md {
@@ -59,7 +86,10 @@
   &__container {
     max-width: 940px;
     margin: 0 auto;
-    display: flex;
+
+    @include md {
+      display: flex;
+    }
   }
 
   &__contacts {
@@ -68,12 +98,6 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
-    }
-    & p {
-      font-size: 16px;
-      line-height: 26px;
-      letter-spacing: 0.05em;
-      color: $white;
     }
 
     @include md {
@@ -110,12 +134,6 @@
     @include md {
         gap: 16px;
     }
-    & a {
-      font-size: 16px;
-      line-height: 26px;
-      letter-spacing: 0.05em;
-      color: $white;
-    }
 
     @include md {
         margin-right: 50px;
@@ -134,12 +152,6 @@
     @include md {
         gap: 16px;
     }
-    & a {
-      font-size: 16px;
-      line-height: 26px;
-      letter-spacing: 0.05em;
-      color: $white;
-    }
   }
 }
 .copyright {
@@ -149,10 +161,6 @@
   }
 
   &__text {
-    font-size: 16px;
-    line-height: 26px;
-    letter-spacing: 0.05em;
-    color: $white;
     opacity: 0.4;
   }
 }

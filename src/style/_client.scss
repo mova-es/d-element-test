@@ -1,7 +1,21 @@
 .client {
   padding-top: 96px;
   padding-bottom: 111px;
-  background-color: $blue-04;
+  // background-color: $blue-04;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: $blue-04;
+    border-radius: 100px 0px 0px 0px;
+    z-index: -2;
+
+    @include lg {
+      border-radius: 200px 0px 0px 0px;
+    }
+  }
 
   &__container {
     max-width: 940px;
@@ -51,6 +65,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+
+    &:hover {
+      background:rgba($color: $blue-01, $alpha: 0.2);
+    }
 
     &:not(:last-child) {
       border-bottom: 1px solid $white;
