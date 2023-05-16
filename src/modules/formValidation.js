@@ -1,19 +1,27 @@
 export const formValidation = () => {
-    const inputElems = document.querySelectorAll('input');
-    const buttonSubmit = document.querySelector('.modal__button');
+    const formEl = document.querySelector('.modal__form');
+    const inputElems = document.querySelectorAll('.modal__input');
+    const modalwindow = document.querySelector('.modal');
+    const popupMessage = document.querySelector('.popup-message');
 
+    formEl.onsubmit = function () {
+        let emptyInputs = Array.from(inputElems).filter(input => input.value === '');
 
-    buttonSubmit.addEventListener('submit', function () {
-        event.preventDefault();
-        
-       inputElems.forEach(element => {
-        if(element.value === '') {
-            element.style.border = '1px solid red';
+        inputElems.forEach(input => {
+            if(input.value === '') {
+                input.classList.add('error');
+            } else {
+                input.classList.remove('error');
+            }
+        });
+
+        if(emptyInputs.length !== 0) {
+            return false;
         } else {
-            alert('Форма успешно отправлена');
+            modalwindow.style.opacity = 0;
+            modalwindow.style.visibility = 'hidden';
+            popupMessage.style.visibility = 'visible';
+            popupMessage.style.opacity = 1;
         }
-    }); 
-    });
-    
-
+    }
 }

@@ -154,23 +154,28 @@
       </section>
     </main>
     <footer class="footer">
+      <div class="popup-message">
+        <div class="popup-message__main"> 
+          <p>Your message has successfully sent</p>
+        </div>
+      </div>
       <div class="modal">
         <div class="modal__main">
           <button class="modal__close"></button>          
           <h3 class="modal__title">Send us message</h3>
-          <form action="#" method="post">
+          <form class="modal__form" action="https://foo.com" method="post">
             <p class="modal__description">
               Full Name
             </p>
-            <input type="text" id="full-name" placeholder="Your Name">
+            <input class="modal__input" type="text" id="full-name" placeholder="Your Name">
             <p class="modal__description">
               Email
             </p>
-            <input type="email" id="email" placeholder="Your Email">
+            <input class="modal__input" type="email" id="email" placeholder="Your Email">
             <p class="modal__description">
               Message
             </p>
-            <input type="text" id="message" placeholder="Your Message">
+            <input class="modal__input input-message" type="text" id="message" placeholder="Your Message">
             <button class="modal__button" type="submit">Submit</button>
           </form>
         </div>
