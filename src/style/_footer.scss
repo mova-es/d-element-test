@@ -13,7 +13,11 @@
     background: $blue-02;
     border-radius: 0px 200px 0px 0px;
     z-index: -1;
-    width: 92%;
+    width: 100%;
+
+    @include sm {
+      width: 92%;
+    }
   }
 
   & h4 {
